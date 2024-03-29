@@ -33,20 +33,23 @@ const Layout = props => {
               <li className={`nav-home  ${data.pathname === '/' ? 'nav-current' : ""} `} role="menuitem">
                 <Link to={`/`}>Home</Link>
               </li>
-              <li className={`nav-home  ${data.pathname.includes('/bio') ? 'nav-current' : ""} `} role="menuitem">
-                <Link to={`/bio`}>Bio</Link>
+              <li className={`nav-home  ${data.pathname.includes('/about') ? 'nav-current' : ""} `} role="menuitem">
+                <Link to={`/about`}>About</Link>
               </li>
-              <li className={`nav-home  ${data.pathname.includes('/work') ? 'nav-current' : ""} `} role="menuitem">
-                <Link to={`/work`}>Work</Link>
+              <li className={`nav-home  ${data.pathname.includes('/guide') ? 'nav-current' : ""} `} role="menuitem">
+                <Link to={`/guide`}>Guide</Link>
               </li>
-              <li className={`nav-home  ${data.pathname.includes('/news') ? 'nav-current' : ""} `} role="menuitem">
-                <Link to={`/news`}>News</Link>
+              <li className={`nav-home  ${data.pathname.includes('/reservation') ? 'nav-current' : ""} `} role="menuitem">
+                <Link to={`/reservation`}>reservation</Link>
+              </li>
+              <li className={`nav-home  ${data.pathname.includes('/archive') ? 'nav-current' : ""} `} role="menuitem">
+                <Link to={`/archive`}>Archive</Link>
+              </li>
+              <li className={`nav-home  ${data.pathname.includes('/location') ? 'nav-current' : ""} `} role="menuitem">
+                <Link to={`/location`}>Location</Link>
               </li>
               <li className={`nav-home  ${data.pathname.includes('/contact') ? 'nav-current' : ""} `} role="menuitem">
                 <Link to={`/contact`}>Contact</Link>
-              </li>
-              <li className={`nav-home  ${data.pathname.includes('/elements') ? 'nav-current' : ""} `} role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
               </li>
             </ul>
           </nav>
@@ -58,33 +61,13 @@ const Layout = props => {
           <div className="site-head-right">
             <div className="social-links">
               <Link
-                to={`https://facebook.com/${social.facebook}`}
-                title="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook
-              </Link>
-              <Link
-                to={`https://instagram.com/${social.twitter}`}
+                to={`https://www.instagram.com/blankbeam`}
                 title="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Instagram
-              </Link>
-
-              
-              <Link
-                to={`https://github.com/lilxyzz/gatsby-clay`}
-                title="Github"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Github
-              </Link>
-
-              
+              </Link>              
             </div>
           </div>
         </div>
@@ -96,18 +79,8 @@ const Layout = props => {
       </main>
       <footer className="site-foot">
         &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built with {""}
-        <a
-          href="https://gatsbyjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        Gatsby
-        </a>
-         
       </footer>
     </div>
   )
 }
-
 export default Layout
